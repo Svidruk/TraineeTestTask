@@ -1,28 +1,33 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const CharacterDescription = ({ characters }) => {
+function CharacterDescription() {
   const { id } = useParams();
-  const character = characters.find((c) => c.id === parseInt(id));
+  const [character, setCharacter] = useState(null);
 
-  if (!character) {
-    return <div>Loading...</div>;
-  }
+  useEffect(() => {
+    fetch(`https://rickandmortyapi.com/api/character/${id}`)
+      .then((response) => response.json())
+      .then((data) => setCharacter(data))
+      .catch((error) => console.error(error));
+  }, [id]);
 
   return (
-    <div className='character'>
-      <img src={character.image} alt={character.name} />
-      <div>
-        <h1>{character.name}</h1>
-        <p>Status: {character.status}</p>
-        <p>Species: {character.species}</p>
-        <p>Type: {character.type ? character.type : "-"}</p>
-        <p>Gender: {character.gender}</p>
-        <p>Origin: {character.origin.name}</p>
-        <p>Location: {character.location.name}</p>
-      </div>
+    <div>
+      {character ? (
+        <div>
+          <h1>{character.name}</h1>
+          <img src={character.image} alt={character.name} />
+          <div>Status: {character.status}</div>
+          <div>Species: {character.species}</div>
+          <div>Gender: {character.gender}</div>
+          <div>Location: {character.location.name}</div>
+        </div>
+      ) : (
+        <div>Loading...</div>
+      )}
     </div>
   );
-};
+}
 
 export default CharacterDescription;
