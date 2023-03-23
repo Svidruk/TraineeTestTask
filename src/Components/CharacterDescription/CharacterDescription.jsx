@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ReactComponent as BackArrow } from "../../assets/BackArrow.svg";
+import LoadingAnimationComponent from "../LoadingAnimationComponent/LoadingAnimationComponent";
 import { Link } from "react-router-dom";
 import "./CharacterDescription.css";
 
@@ -18,7 +19,7 @@ function CharacterDescription() {
   return (
     <>
       <Link className='goBack' to='/'>
-        <BackArrow className="img"></BackArrow>
+        <BackArrow className='img'></BackArrow>
         <p>GO BACK</p>
       </Link>
       <div className='character-description-container'>
@@ -53,7 +54,7 @@ function CharacterDescription() {
             </ul>
           </div>
         ) : (
-          <div>Loading...</div>
+          <LoadingAnimationComponent />
         )}
       </div>
     </>

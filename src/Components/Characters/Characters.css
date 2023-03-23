@@ -4,6 +4,42 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
+.progress-bar {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  z-index: 999;
+  width: 100px;
+  height: 100px;
+}
+
+.circle {
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  border: solid 5px  #a9a9a9;
+  border-top-color:  #212121;
+  border-radius: 50%;
+}
+
+.border {
+  width: 100%;
+  transform: rotate(135deg);  
+  animation: spin 1.3s steps(2) .2s infinite;
+  -webkit-animation: spin 1.3s linear infinite;
+
+}
+
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .logo-container {
   display: flex;
   align-items: center;
@@ -37,8 +73,8 @@
 }
 
 @media (max-width: 480px) {
-    .item {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-    }
+  .item {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

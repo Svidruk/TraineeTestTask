@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CharacterCard from "../CharacterCard/CharacterCard";
 import SearchBar from "../SearchBar/SearchBar";
+import LoadingAnimationComponent from "../LoadingAnimationComponent/LoadingAnimationComponent";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import "./Characters.css";
 
@@ -34,7 +35,7 @@ const Characters = () => {
       <Logo className='logo' />
       <SearchBar onSearch={setQuery} />
       {isLoading ? (
-        <div>Loading...</div>
+        <LoadingAnimationComponent />
       ) : characters && characters.length > 0 ? (
         <div className='character-list'>
           {characters.slice(0, 8).map((character) => (
