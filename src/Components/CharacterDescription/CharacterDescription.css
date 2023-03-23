@@ -1,0 +1,87 @@
+hr {
+  margin: auto;
+  height: 0px;
+  border-width: 0.5px;
+  background-color: red;
+  width: 98%;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+.goBack {
+  padding: 25px 0 0 50px;
+  color: #000;
+  display: flex;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.title {
+  width: max-content;
+  font-weight: 400;
+  text-align: center;
+  font-size: 48px;
+  line-height: 56px;
+  margin-top: 20px;
+}
+
+.info {
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.15px;
+  color: #8e8e93;
+  text-align: center;
+  margin: 0;
+}
+
+.img {
+  margin-right: 12px;
+  margin-top: 19px;
+}
+
+.character-description-container {
+  display: flex;
+  max-width: 1280px;
+  padding-top: 40px;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.card-description-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+}
+
+.info-container {
+  width: 420px;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  list-style: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #081f32;
+  padding-top: 10px;
+}
+
+.description {
+  list-style: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #6e798c;
+  padding-bottom: 12px;
+}

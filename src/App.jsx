@@ -1,8 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import Characters from "./Components/Characters";
-import CharacterDescription from "./Components/CharacterDescription";
-
-import "./App.css";
+import Characters from "./Components/Characters/Characters";
+import CharacterDescription from "./Components/CharacterDescription/CharacterDescription";
 
 const App = () => {
   return (

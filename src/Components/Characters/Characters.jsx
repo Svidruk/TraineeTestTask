@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import CharacterCard from "./CharacterCard";
-import SearchBar from "./SearchBar";
+import CharacterCard from "../CharacterCard/CharacterCard";
+import SearchBar from "../SearchBar/SearchBar";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
+import "./Characters.css";
 
 const Characters = () => {
   const [query, setQuery] = useState("");
@@ -29,9 +31,7 @@ const Characters = () => {
 
   return (
     <div className='container'>
-      <div>
-        <image src='../assets/rickandmortylogo/' />
-      </div>
+      <Logo className='logo' />
       <SearchBar onSearch={setQuery} />
       {isLoading ? (
         <div>Loading...</div>

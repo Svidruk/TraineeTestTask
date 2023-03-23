@@ -1,0 +1,26 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 1020;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 33px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar-input {
+  padding: 0.5rem;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  color: #333333;
+  outline: none;
+}
+
+.glass {
+    padding: 0 10px 0 10px;
+}
